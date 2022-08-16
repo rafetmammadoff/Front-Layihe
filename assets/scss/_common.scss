@@ -115,6 +115,26 @@
             }
         }
     }
+    .customer{
+        .user-details{
+            padding: 35px 10px 30px !important;
+        }
+        .user-img{
+           position: unset !important; 
+           margin: 0 auto !important;
+           margin-bottom: 15px !important;
+        }
+        .user-desc{
+            text-align: center !important;
+        }
+        .user-detail{
+            span{
+                display: block !important;
+                text-align: center !important;
+                margin-bottom: 10px !important;
+            }
+        }
+    }
 }
 @media screen and (max-width: 600px) {
     .header-med{
