@@ -51,6 +51,45 @@
     .header-med{
         display: flex !important;
     }
+    .faboluous{
+        .text-area{
+            .text{
+                .about{
+                    text-align: center !important;
+
+                }
+                .title{
+                    text-align: center !important;
+                }
+                .big-line{
+                    display: flex !important;
+                    align-items: center !important;
+                    justify-content: center !important;
+                }
+                .desc{
+                    text-align: center !important;
+                }
+                .category-list{
+                    .list-item{
+                        text-align: center !important;
+                        padding: 0 !important;
+                        li{
+                            display: inline-block;
+                            vertical-align: middle;
+                            float: none !important;
+                            width: auto !important;
+                            margin-left: 30px !important;
+                        }
+                    }
+                }
+                .story-btn{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+    }
 }
 
 
@@ -85,7 +124,57 @@
             }
         }
     }
+    .footer{
+        .txt{
+            margin-bottom: 20px !important;
+        }
+    }
+    .components{
+        .one-component{
+            display: flex !important;
+            align-items: center !important;
+            justify-content: space-between !important;
+            .title{
+                text-align: left !important;
+            }
+            .desc{
+                text-align: left !important;
+            }
+            .logo{
+                margin-right: 14px !important;
+            }
+        }
+    }
 }
 .opCl{
     transform: translateX(0px) !important;
+}
+
+@media screen and ( max-width: 400px) {
+   .main-container{
+    max-width: 97% !important;
+   }
+    .faboluous{
+        .text-area{
+            .text{
+                
+                .category-list{
+                    .list-item{
+                        text-align: center !important;
+                        padding: 0 !important;
+                        li{
+                            display: block;
+                            text-align: left;
+                            width: auto !important;
+                        }
+                    }
+                }
+                .story-btn{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+    }
 }
