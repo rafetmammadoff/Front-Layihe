@@ -5,10 +5,10 @@ $('.owl-carousel').owlCarousel({
     responsive:{
         0:{
             items:1,
-            nav:true
+            nav:false
         },
         600:{
-            items:3,
+            items:1,
             nav:false
         },
         1000:{
@@ -17,4 +17,13 @@ $('.owl-carousel').owlCarousel({
             loop:true
         }
     }
+})
+let closeBtn=document.querySelector(".close")
+let openBtn=document.querySelector(".open")
+let swipeNav=document.querySelector(".swipe-nav")
+closeBtn.addEventListener("click",function(){
+    swipeNav.classList.toggle("opCl")
+})
+openBtn.addEventListener("click",function(){
+    swipeNav.classList.toggle("opCl")
 })
