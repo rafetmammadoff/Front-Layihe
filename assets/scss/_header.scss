@@ -184,6 +184,23 @@
         }
     }
 }
+.shop-header{
+    background-color: white !important;
+    position: relative !important;
+    .nav{
+        .main-ul{
+            li{
+                color: black !important;
+            }
+        }
+        
+    }
+    .icons{
+        i{
+            color: black !important;
+        }
+    }
+}
 .header-med{
     background-color: #fff;
     height: 70px;
