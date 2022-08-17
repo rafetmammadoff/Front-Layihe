@@ -1,13 +1,14 @@
 
 .header{
-    background-color: #2FC4ED;
     height: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
-    z-index: 9;
+    transition: .5s;
     top: 0;
+    z-index: 9;
+    
     width: 100%;
     display: flex;
     .container{
@@ -94,6 +95,89 @@
                     color: #fff;
                     &:first-child{
                         font-size: 20px;
+                    }
+                }
+                .bascet{
+                    position: relative;
+                    i{
+                        font-size: 25px;
+                    }
+                    .bascet-dropdown-menu{
+                        font-family: 'Poppins', sans-serif;
+                        left: auto;
+                        position: absolute;
+                        right: 0;
+                        text-align: left;
+                        width: 350px;
+                        height: 0;
+                        overflow: hidden;
+                        z-index: 3;
+                        top: 42px;
+                        padding: 0 15px;
+                        background: #fff;
+                        border-radius: 0;
+                        box-shadow: none;
+                        margin: 0;
+                        transition: .6s;
+                        padding: 0;
+                        span{
+                            font-size: 14px;
+                            line-height: 18px;
+                            margin-bottom: 0;
+                            padding: 10px 0;
+                            color: #222;
+                            display: none;
+                        }
+                        .first{
+                            max-height: 300px;
+                            overflow-y: scroll;
+                            .table{
+                                tbody{
+                                    tr{
+                                        .img-area{
+                                            width: 100px;
+                                            img{
+                                                width: 100%;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .second{
+                            margin-top: 14px;
+                            padding-bottom: 19px;
+                            .btn-default{
+                                background-color: #eb4d4b;
+                                border-color: #eb4d4b;
+                                color: #fff;
+                                outline: none;
+                                font-size: 14px;
+                                line-height: 18px;
+                                font-weight: 400;
+                                padding: 10px 20px;
+                                text-transform: uppercase;
+                                border-radius: 0;
+                                margin-right: 15px;
+                            }
+                            .btn-primary{
+                                opacity: 1;
+                                font-size: 14px;
+                                font-weight: 400;
+                                padding: 10px 20px;
+                                text-transform: uppercase;
+                                border-radius: 0;
+                                -webkit-transition: all 0.5s;
+                                -moz-transition: all 0.5s;
+                                -o-transition: all 0.5s;
+                                transition: all 0.5s;
+                                color: #fff;
+                                background-color: #232323;
+                                border: 1px solid #232323;
+                                outline: none;
+                                line-height: 18px;
+                            }
+                        }
                     }
                 }
             }
@@ -199,6 +283,8 @@
 .slide-area{
     .owl-carousel{
         position: relative;
+        .owl-item{
+        }
         &:hover{
             .owl-prev{
                 width: 40px !important;

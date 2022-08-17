@@ -1,5 +1,4 @@
 .header {
-  background-color: #2FC4ED;
   height: 70px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11,8 +10,10 @@
       -ms-flex-pack: center;
           justify-content: center;
   position: absolute;
-  z-index: 9;
+  -webkit-transition: .5s;
+  transition: .5s;
   top: 0;
+  z-index: 9;
   width: 100%;
   display: flex;
 }
@@ -140,6 +141,93 @@
 
 .header .container .row .icons i:first-child {
   font-size: 20px;
+}
+
+.header .container .row .icons .bascet {
+  position: relative;
+}
+
+.header .container .row .icons .bascet i {
+  font-size: 25px;
+}
+
+.header .container .row .icons .bascet .bascet-dropdown-menu {
+  font-family: 'Poppins', sans-serif;
+  left: auto;
+  position: absolute;
+  right: 0;
+  text-align: left;
+  width: 350px;
+  height: 0;
+  overflow: hidden;
+  z-index: 3;
+  top: 42px;
+  padding: 0 15px;
+  background: #fff;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  margin: 0;
+  -webkit-transition: .6s;
+  transition: .6s;
+  padding: 0;
+}
+
+.header .container .row .icons .bascet .bascet-dropdown-menu span {
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 0;
+  padding: 10px 0;
+  color: #222;
+  display: none;
+}
+
+.header .container .row .icons .bascet .bascet-dropdown-menu .first {
+  max-height: 300px;
+  overflow-y: scroll;
+}
+
+.header .container .row .icons .bascet .bascet-dropdown-menu .first .table tbody tr .img-area {
+  width: 100px;
+}
+
+.header .container .row .icons .bascet .bascet-dropdown-menu .first .table tbody tr .img-area img {
+  width: 100%;
+}
+
+.header .container .row .icons .bascet .bascet-dropdown-menu .second {
+  margin-top: 14px;
+  padding-bottom: 19px;
+}
+
+.header .container .row .icons .bascet .bascet-dropdown-menu .second .btn-default {
+  background-color: #eb4d4b;
+  border-color: #eb4d4b;
+  color: #fff;
+  outline: none;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border-radius: 0;
+  margin-right: 15px;
+}
+
+.header .container .row .icons .bascet .bascet-dropdown-menu .second .btn-primary {
+  opacity: 1;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border-radius: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  color: #fff;
+  background-color: #232323;
+  border: 1px solid #232323;
+  outline: none;
+  line-height: 18px;
 }
 
 .header-med {
@@ -1374,6 +1462,42 @@
   max-width: 78%;
 }
 
+body::-webkit-scrollbar {
+  width: 4px;
+  /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+  /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: blue;
+  /* color of the scroll thumb */
+  border-radius: 0px;
+  width: 5px;
+  /* roundness of the scroll thumb */
+}
+
+.first::-webkit-scrollbar {
+  width: 4px;
+  /* width of the entire scrollbar */
+}
+
+.first::-webkit-scrollbar-track {
+  background: transparent;
+  /* color of the tracking area */
+}
+
+.first::-webkit-scrollbar-thumb {
+  background-color: #bbbbbd;
+  /* color of the scroll thumb */
+  border-radius: 5px;
+  width: 5px;
+  /* roundness of the scroll thumb */
+}
+
 @-webkit-keyframes slide-down {
   0% {
     -webkit-transform: translateY(-100%);
@@ -1420,6 +1544,36 @@
     -webkit-transform: none;
             transform: none;
   }
+}
+
+.open-menu {
+  height: -webkit-max-content !important;
+  height: -moz-max-content !important;
+  height: max-content !important;
+}
+
+.bascet-icon {
+  position: relative;
+}
+
+.bascet-icon .basket-count {
+  position: absolute;
+  top: 7px;
+  right: 1px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: orangered;
+  font-size: 11px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media screen and (max-width: 992px) {
