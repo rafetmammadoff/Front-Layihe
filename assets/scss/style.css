@@ -1084,6 +1084,292 @@
   display: inline-block;
 }
 
+.products {
+  padding-top: 80px;
+}
+
+.products .about {
+  font-size: 16px;
+  letter-spacing: 8px;
+  font-weight: 500;
+  margin: 0;
+  margin-bottom: 12px;
+  font-family: 'Poppins', sans-serif;
+  color: #eb4d4b;
+  line-height: 18px;
+  text-align: center;
+}
+
+.products .title {
+  font-size: 40px;
+  line-height: 40px;
+  letter-spacing: 0;
+  font-weight: 600;
+  color: #222;
+  font-family: 'Poppins', sans-serif;
+  text-transform: unset;
+  position: relative;
+  margin: 0;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.products .big-line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.products .line {
+  width: 80px;
+  height: 4px;
+  background: #eb4d4b;
+  margin-bottom: 25px;
+}
+
+.products .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.products .links .features {
+  width: 114px;
+  height: 40px;
+  background-color: #f2f2f2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.products .links .best-seller {
+  width: 114px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #666;
+}
+
+.products .links .n-arrival {
+  width: 114px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #666;
+}
+
+.products .product-components .owl-nav .owl-prev, .products .product-components .owl-nav .owl-next {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #eb4d4b;
+  color: white;
+  font-size: 18px;
+}
+
+.products .product-components .two-component .one-component {
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.products .product-components .two-component .one-component:hover .my-card .img-area .hover {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  opacity: 1;
+}
+
+.products .product-components .two-component .one-component:hover .my-card .button-group .circle {
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  opacity: 1;
+}
+
+.products .product-components .two-component .one-component:hover .my-card .btn-card {
+  -webkit-transform: translateY(17px);
+          transform: translateY(17px);
+  opacity: 1;
+}
+
+.products .product-components .two-component .one-component .my-card {
+  position: relative;
+}
+
+.products .product-components .two-component .one-component .my-card .img-area {
+  position: relative;
+}
+
+.products .product-components .two-component .one-component .my-card .img-area .hover {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  -webkit-transform: rotateY(90deg);
+          transform: rotateY(90deg);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.products .product-components .two-component .one-component .my-card .card-detail p {
+  font-weight: bold;
+  font-size: 16px;
+  margin: 0;
+  text-align: center;
+}
+
+.products .product-components .two-component .one-component .my-card .card-detail .name {
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+
+.products .product-components .two-component .one-component .my-card .card-detail .price {
+  color: #eb4d4b;
+  margin-bottom: 16px;
+}
+
+.products .product-components .two-component .one-component .my-card .rating {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: auto;
+  bottom: 84px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.products .product-components .two-component .one-component .my-card .rating i {
+  color: gainsboro;
+}
+
+.products .product-components .two-component .one-component .my-card .rating .yellow {
+  color: orange;
+}
+
+.products .product-components .two-component .one-component .my-card .button-group {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+}
+
+.products .product-components .two-component .one-component .my-card .button-group .circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  -webkit-box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.2);
+  margin-bottom: 8px;
+  -webkit-transform: translateX(30px);
+          transform: translateX(30px);
+  opacity: 0;
+}
+
+.products .product-components .two-component .one-component .my-card .button-group .circle svg {
+  width: 40px;
+}
+
+.products .product-components .two-component .one-component .my-card .button-group .circle:hover {
+  background-color: #eb4d4b;
+}
+
+.products .product-components .two-component .one-component .my-card .button-group .circle:hover svg {
+  fill: white;
+}
+
+.products .product-components .two-component .one-component .my-card .button-group .btn-quickview {
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.products .product-components .two-component .one-component .my-card .button-group .btn-wishlist {
+  -webkit-transition: .6s;
+  transition: .6s;
+}
+
+.products .product-components .two-component .one-component .my-card .button-group .btn-compare {
+  -webkit-transition: .8s;
+  transition: .8s;
+}
+
+.products .product-components .two-component .one-component .my-card .btn-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+  opacity: 0;
+  -webkit-transition: .7s;
+  transition: .7s;
+}
+
+.products .product-components .two-component .one-component .my-card .btn-card button {
+  border: none;
+  color: #fff;
+  border-radius: 0;
+  background-color: #eb4d4b;
+  padding: 10px 21px;
+  -webkit-transition: .6s;
+  transition: .6s;
+}
+
+.products .product-components .two-component .one-component .my-card .btn-card button:hover {
+  background-color: black;
+  color: white;
+}
+
+.products .product-components .two-component .one-component .my-card .btn-card button span {
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  line-height: 13px;
+  text-transform: uppercase;
+}
+
 .main-container {
   max-width: 78%;
 }

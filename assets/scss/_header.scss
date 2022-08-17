@@ -887,3 +887,226 @@
         }
     }
 }
+.products{
+    padding-top: 80px;
+    .about{
+        font-size: 16px;
+        letter-spacing: 8px;
+        font-weight: 500;
+        margin: 0;
+        margin-bottom: 12px;
+        font-family: 'Poppins', sans-serif;
+        color: #eb4d4b;
+        line-height: 18px;
+        text-align: center;
+    }
+    .title{
+        font-size: 40px;
+        line-height: 40px;
+        letter-spacing: 0;
+        font-weight: 600;
+        color: #222;
+        font-family: 'Poppins', sans-serif;
+        text-transform: unset;
+        position: relative;
+        margin: 0;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+    .big-line{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .line{
+        width: 80px;
+        height: 4px;
+        background: #eb4d4b;
+        margin-bottom: 25px;
+    }
+    .links{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        
+        cursor: pointer;
+        .features{
+            width: 114px;
+            height: 40px;
+            background-color: #f2f2f2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .best-seller{
+            width: 114px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+        }
+        .n-arrival{
+            width: 114px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+        }
+    }
+    .product-components{
+        .owl-nav{
+            .owl-prev,.owl-next{
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background-color: #eb4d4b;
+                color: white;
+                font-size: 18px;
+            }
+        }
+        .two-component{
+            .one-component{
+                margin-bottom: 10px;
+                overflow: hidden;
+                &:hover{
+                    .my-card{
+                        .img-area{
+                            .hover{
+                                transform: rotateY(180deg);
+                              opacity: 1;
+                            }  
+                               
+                        }
+                        .button-group{
+                            .circle{
+                                transform: translateX(0px);
+                                opacity: 1;
+                            }
+                        }
+                        .btn-card{
+                            transform: translateY(17px);
+                            opacity: 1;
+                        }
+                    }
+
+                }
+                .my-card{
+                    position: relative;
+                    .img-area{
+                        position: relative;
+                        .hover{
+                            position: absolute;
+                            opacity: 0;
+                            top: 0;
+                            right: 0;
+                            left: 0;
+                            bottom: 0;
+                            transform: rotateY(90deg);
+                            transition: 1s;
+                        }
+                    }
+                    .card-detail{
+                        p{
+                            font-weight: bold;
+                            font-size: 16px;
+                            margin: 0;
+                            text-align: center;
+                        }
+                        .name{
+                            margin-top: 10px;
+                            margin-bottom: 8px;
+                        }
+                        .price{
+                            color: #eb4d4b;
+                            margin-bottom: 16px;
+                        }
+                    }
+                    .rating{
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        top: auto;
+                        bottom: 84px;
+                        text-align: center;
+                        margin: 0 auto;
+                        i{
+                            color: gainsboro;
+                        }
+                        .yellow{
+                            color: orange;
+                        }
+                    }
+                    .button-group{
+                        position: absolute;
+                        top: 20px;
+                        right: 10px;
+                        .circle{
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                            background-color: white;
+                            box-shadow: 0 0 4px 2px rgba(0,0,0,.2);
+                            margin-bottom: 8px;
+                            transform: translateX(30px);
+                            opacity: 0;
+                            svg{
+                                width: 40px;
+                            }
+                            &:hover{
+                                background-color: #eb4d4b;
+                                svg{
+                                    fill: white;
+                                }
+                            }
+                        }
+                        .btn-quickview{
+                            transition: .2s;
+                        }
+                        .btn-wishlist{
+                            transition: .6s;
+                        }
+                        .btn-compare{
+                            transition: .8s;
+                        }
+                    }
+                    .btn-card{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        transform: translateY(40px);
+                        opacity: 0;
+                        transition: .7s;
+                        button{
+                            &:hover{
+                                background-color: black;
+                                color: white;
+                            }
+                            border: none;
+                                color: #fff;
+                                border-radius: 0;
+                                background-color: #eb4d4b;
+                                padding: 10px 21px;
+                                transition: .6s;
+                            span{
+                                
+
+                                font-size: 13px;
+                                font-weight: 400;
+                                letter-spacing: 0.5px;
+                                line-height: 13px;
+                                text-transform: uppercase;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
