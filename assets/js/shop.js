@@ -67,6 +67,7 @@ function GetPrice() {
      priceArea.innerText=totalPrice +"$";
 }
 
+
 function AddToCard(e) {
     let basket=JSON.parse(localStorage.getItem("basket"))
     let trs=tBody.querySelectorAll("tr")
@@ -99,12 +100,35 @@ function AddToCard(e) {
             let btn=document.createElement("button")
             btn.className="btn btn-danger"
             btn.innerText="X"
+            btn.setAttribute("data-id",obj.id)
             td3.append(btn)
             tr.append(td1)
             tr.append(td2)
             tr.append(td3)
-            
             tBody.append(tr)
+
+            /////delete
+            btn.addEventListener("click",function(e){
+                let res=basket.find((obj)=>{
+                    return obj.id==e.target.getAttribute("data-id")
+                })
+                
+                let map=basket.map((obj)=>{
+                    if (obj.id != res.id) {
+                        return obj
+                    }
+                     
+                })
+                let filtered=map.filter((val)=>{
+                    return val
+                })
+                localStorage.setItem("basket",JSON.stringify(filtered))
+
+                e.target.closest("tr").remove();
+                GetCount();
+                GetPrice()
+                window.location.reload()
+            })
 
     })
 
@@ -212,10 +236,12 @@ window.addEventListener("DOMContentLoaded",function(){
     else{
         emptyCart.style.display="none"
     }
+
+    AddToCard();
     
 })
 
-AddToCard();
+
 AddToCard2();
 
 let inputs=document.querySelectorAll(".my-input")
