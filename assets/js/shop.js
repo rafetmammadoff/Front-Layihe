@@ -7,10 +7,45 @@ let priceArea=document.querySelector(".total-value")
 let shopTbody=document.querySelector(".shop-tbody")
 let shopTable=document.querySelector(".shopping-table")
 let emptyCart=document.querySelector(".empty-cart")
+let totalPriceBascet=document.querySelector(".totalPrice")
+let subTotal=document.querySelector(".sub-total")
+
+let subTotalNav=document.querySelector(".sub-total-nav")
+let taxiNav=document.querySelector(".taxi-nav")
+let amountNav=document.querySelector(".amount-nav")
+
+let totalAmount=document.querySelector(".percent20")
+let taxi=document.querySelector(".taxi")
 bascetBtn.addEventListener("click",function(e){
     bascetDDMenu.classList.toggle("open-menu")
     
 })
+
+
+
+var acc = document.getElementsByClassName("accordion");
+var i;
+var icon=document.querySelector(".icon-a")
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function(e) {
+    var panel = this.nextElementSibling;
+    var elems=Array.from(panel.children)
+    console.log(elems);
+    var total=0;
+    elems.forEach((elem)=>{
+       total+=elem.clientHeight
+    })
+    console.log(total);
+    if (panel.style.height === "" || panel.style.height==="0px") {
+      panel.style.height = total +"px";
+      this.querySelector(".icon-a").style.transform="rotateX(180deg)"
+    } else {
+        console.log(panel.style.height);
+      panel.style.height = "0px";
+      this.querySelector(".icon-a").style.transform="rotateX(1800deg)"
+
+    }
+  })};
 
 
 
@@ -65,6 +100,19 @@ function GetPrice() {
         return total+=val.count * val.price;
      },0)
      priceArea.innerText=totalPrice +"$";
+     totalPriceBascet.innerText=totalPrice +" $"
+   
+     let count=Math.floor(totalPrice/100)
+     subTotal.innerText=count*100
+     totalAmount.innerText=Math.floor((totalPrice-subTotal.innerText)/10)*10
+     amountNav.innerText=Math.floor((totalPrice-subTotal.innerText)/10)*10
+     taxi.innerText=(totalPrice-subTotal.innerText)-totalAmount.innerText
+
+     subTotalNav.innerText=count*100
+     taxiNav.innerText=(totalPrice-subTotal.innerText)-totalAmount.innerText
+
+     
+
 }
 
 
@@ -99,7 +147,7 @@ function AddToCard(e) {
             let td3=document.createElement("td")
             let btn=document.createElement("button")
             btn.className="btn btn-danger"
-            btn.innerText="X"
+            btn.innerHTML='<i class="fa-solid fa-xmark"></i>'
             btn.setAttribute("data-id",obj.id)
             td3.append(btn)
             tr.append(td1)
@@ -109,8 +157,9 @@ function AddToCard(e) {
 
             /////delete
             btn.addEventListener("click",function(e){
+                console.log(e.target);
                 let res=basket.find((obj)=>{
-                    return obj.id==e.target.getAttribute("data-id")
+                    return obj.id==this.getAttribute("data-id")
                 })
                 
                 let map=basket.map((obj)=>{
@@ -124,7 +173,7 @@ function AddToCard(e) {
                 })
                 localStorage.setItem("basket",JSON.stringify(filtered))
 
-                e.target.closest("tr").remove();
+                this.closest("tr").remove();
                 GetCount();
                 GetPrice()
                 window.location.reload()

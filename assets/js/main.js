@@ -166,6 +166,10 @@ let bascetDDMenu=document.querySelector(".bascet-dropdown-menu")
 let tBody=document.querySelector(".tbody")
 let priceArea=document.querySelector(".total-value")
 
+let subTotalNav=document.querySelector(".sub-total-nav")
+let taxiNav=document.querySelector(".taxi-nav")
+let amountNav=document.querySelector(".amount-nav")
+
 bascetBtn.addEventListener("click",function(e){
     bascetDDMenu.classList.toggle("open-menu")
     
@@ -223,6 +227,10 @@ function GetPrice() {
         return total+=val.count * val.price;
      },0)
      priceArea.innerText=totalPrice +"$";
+     let count=Math.floor(totalPrice/100)
+     amountNav.innerText=Math.floor((totalPrice-(count*100))/10)*10
+     subTotalNav.innerText=count*100
+     taxiNav.innerText=(totalPrice-(count*100))-Math.floor((totalPrice-(count*100))/10)*10
 }
 
 function AddToCard(e) {
