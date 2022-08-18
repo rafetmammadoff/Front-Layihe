@@ -109,6 +109,7 @@
                         font-size: 25px;
                     }
                     .bascet-dropdown-menu{
+                        box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.15) !important;
                         font-family: 'Poppins', sans-serif;
                         left: auto;
                         position: absolute;
@@ -133,6 +134,10 @@
                             padding: 10px 0;
                             color: #222;
                             display: none;
+                            height: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
                         }
                         .first{
                             max-height: 272px;

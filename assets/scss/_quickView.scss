@@ -1,0 +1,128 @@
+.quickview-section{
+    
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    .view-area{
+        position: relative;
+        .close{
+            position: absolute;
+            top: -27px;
+            right: 0;
+            font-size: 17px;
+            color: white;
+
+
+        }
+        width: 900px;
+        height: 500px;
+        background-color: white;
+        .row{
+            height: 100%;
+            .product-left{
+                
+                img{
+                    margin-left: 15px;
+                    margin-top: 15px;
+                }
+            }
+            .product-right{
+                padding:30px 0;
+                h3{
+
+                }
+                .attr{
+                    list-style: none;
+                    padding: 0;
+                    li{
+                        line-height: 28px;
+                        font-size: 14px;
+                        color: #666;
+                        padding: 5px 5px 0;
+                        float: left;
+                        border: 1px solid #eee;
+                        margin-right: 15px;
+                        color: #666;
+                        margin-bottom: 15px;
+                        span{
+                            font-weight: 400;
+                            color: #232323;
+                            font-size: 13px;
+                            display: block;
+                            text-transform: uppercase;
+                            background: #f4f4f4;
+                            padding: 0;
+                        }
+                        a{
+                            color: #666;
+                            text-decoration: none;
+                            background-color: transparent;
+                        }
+                    }
+                }
+                .price{
+                    li{
+                        h3{
+                            font-weight: 500;
+                            margin-top: 30px;
+                        }
+                        
+                    }
+                    .price-tax,.rewardpoint{
+                        line-height: 15px;
+                        padding: 3px 0;
+                        font-size: 15px;
+                        color: #808080;
+                        font-weight: 500;
+                    }
+                }
+                #product2{
+                    .form-group{
+                        label{
+                            float: left;
+                            font-size: 16px;
+                            color: #232323;
+                            font-weight: 500;
+                            margin: 8px 8px 8px 0;
+                        }
+                        #input-quantity{
+                            margin-bottom: 0;
+                            width: auto;
+                            height: 37px;
+                            text-align: center;
+                            display: inline-block;
+                            vertical-align: middle;
+                            line-height: 20px;
+                            border-radius: 0px;
+                        }
+                        #button-cartqv{
+                            width: auto;
+                            display: inline-block;
+                            vertical-align: middle;
+                            opacity: 1;
+                            font-size: 14px;
+                            font-weight: 400;
+                            text-transform: uppercase;
+                            border-radius: 0;
+                            transition: all 0.5s;
+                            color: #fff;
+                            background-color: #232323;
+                            border: 1px solid #232323;
+                            line-height: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

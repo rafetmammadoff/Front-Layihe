@@ -69,6 +69,29 @@ $('.product-slide').owlCarousel({
         }
     }
 })
+$('.touch-slide').owlCarousel({
+    loop:true,
+    margin:10,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:2,
+            nav:true,
+            dots:false
+        },
+        600:{
+            items:2,
+            nav:true,
+            dots:false
+        },
+        1000:{
+            items:4,
+            nav:true,
+            dots:false,
+            loop:false
+        }
+    }
+})
 
 $('.owl-carousel').owlCarousel({
     loop:true,
@@ -107,9 +130,15 @@ var icon=document.querySelector(".icon-a")
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function(e) {
     var panel = this.nextElementSibling;
-    
+    var elems=Array.from(panel.children)
+    console.log(elems);
+    var total=0;
+    elems.forEach((elem)=>{
+       total+=elem.clientHeight
+    })
+    console.log(total);
     if (panel.style.height === "" || panel.style.height==="0px") {
-      panel.style.height = "70px";
+      panel.style.height = total +"px";
       this.querySelector(".icon-a").style.transform="rotateX(180deg)"
     } else {
         console.log(panel.style.height);
@@ -169,9 +198,22 @@ let priceArea=document.querySelector(".total-value")
 let subTotalNav=document.querySelector(".sub-total-nav")
 let taxiNav=document.querySelector(".taxi-nav")
 let amountNav=document.querySelector(".amount-nav")
+let secondNav=document.querySelector(".second")
+let emptyCartText=document.querySelector(".emptyCartText")
 
 bascetBtn.addEventListener("click",function(e){
     bascetDDMenu.classList.toggle("open-menu")
+    let children=Array.from(bascetDDMenu.children)
+    let total=0;
+    children.forEach((child)=>{
+        total+=child.clientHeight
+    })
+    if (bascetDDMenu.classList.contains("open-menu")) {
+        bascetDDMenu.style.height=total+"px"
+    }
+    else{
+        bascetDDMenu.style.height="0px"
+    }
     
 })
 
@@ -241,8 +283,6 @@ function AddToCard(e) {
             tr.remove();
         })
     }
-    console.log(trs.length);
-    console.log(trs);
     basket.forEach((obj)=>{
             let tr=document.createElement("tr")
             let td1=document.createElement("td")
@@ -271,7 +311,7 @@ function AddToCard(e) {
             tr.append(td2)
             tr.append(td3)
             tBody.append(tr)
-
+           
             /////delete
             btn.addEventListener("click",function(e){
                 let basket=JSON.parse(localStorage.getItem("basket"))
@@ -296,9 +336,45 @@ function AddToCard(e) {
                 e.stopPropagation()
                 GetCount();
                 GetPrice()
+                let children=Array.from(bascetDDMenu.children)
+                let total=0;
+                children.forEach((child)=>{
+                    total+=child.clientHeight
+                })
+                bascetDDMenu.style.height=total+"px"
+                
+                
+                if (bascetDDMenu.querySelector(".tbody").firstElementChild==null) {
+                    secondNav.style.display="none"
+                    emptyCartText.style.display="flex"
+                    bascetDDMenu.style.height=total-150+"px"
+                }
+                else{
+                    emptyCartText.style.display="none"
+                    secondNav.style.display="block"
+                }
             })
+
+            if (bascetDDMenu.querySelector(".tbody").firstElementChild==null) {
+                secondNav.style.display="none"
+                emptyCartText.style.display="flex"
+            }
+            else{
+                emptyCartText.style.display="none"
+                secondNav.style.display="block"
+            }
+
+            
 
     })
 
+}
+if (bascetDDMenu.querySelector(".tbody").firstElementChild==null) {
+    secondNav.style.display="none"
+    emptyCartText.style.display="flex"
+}
+else{
+    emptyCartText.style.display="none"
+    secondNav.style.display="block"
 }
 AddToCard();

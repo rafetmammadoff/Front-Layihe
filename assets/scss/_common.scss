@@ -44,7 +44,7 @@ body::-webkit-scrollbar {
 } 
 }
 .open-menu{
-    height: max-content !important;
+    
 }
 .bascet-icon{
     position: relative;
@@ -270,4 +270,10 @@ body::-webkit-scrollbar {
             }
         }
     }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1199px){}
+    .product-right .attr li {
+    width: 45%;
 }

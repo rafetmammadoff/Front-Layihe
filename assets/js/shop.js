@@ -15,9 +15,39 @@ let taxiNav=document.querySelector(".taxi-nav")
 let amountNav=document.querySelector(".amount-nav")
 
 let totalAmount=document.querySelector(".percent20")
+let secondNav=document.querySelector(".second")
+let emptyCartText=document.querySelector(".emptyCartText")
 let taxi=document.querySelector(".taxi")
+
+let closeBtn=document.querySelector(".close")
+let openBtn=document.querySelector(".open")
+let swipeNav=document.querySelector(".swipe-nav")
+closeBtn.addEventListener("click",function(){
+    swipeNav.classList.toggle("opCl")
+})
+openBtn.addEventListener("click",function(){
+    swipeNav.classList.toggle("opCl")
+})
+
+
+
+
+
+
 bascetBtn.addEventListener("click",function(e){
     bascetDDMenu.classList.toggle("open-menu")
+    let children=Array.from(bascetDDMenu.children)
+    let total=0;
+    children.forEach((child)=>{
+        total+=child.clientHeight
+    })
+    if (bascetDDMenu.classList.contains("open-menu")) {
+        bascetDDMenu.style.height=total+"px"
+    }
+    else{
+        bascetDDMenu.style.height="0px"
+    }
+    
     
 })
 
@@ -176,11 +206,44 @@ function AddToCard(e) {
                 this.closest("tr").remove();
                 GetCount();
                 GetPrice()
+                let children=Array.from(bascetDDMenu.children)
+                let total=0;
+                children.forEach((child)=>{
+                    total+=child.clientHeight
+                })
+                bascetDDMenu.style.height=total+"px"
+                
+                
+                if (bascetDDMenu.querySelector(".tbody").firstElementChild==null) {
+                    secondNav.style.display="none"
+                    emptyCartText.style.display="flex"
+                    bascetDDMenu.style.height=total-150+"px"
+                }
+                else{
+                    emptyCartText.style.display="none"
+                    secondNav.style.display="block"
+                }
                 window.location.reload()
             })
+            if (bascetDDMenu.querySelector(".tbody").firstElementChild==null) {
+                secondNav.style.display="none"
+                emptyCartText.style.display="flex"
+            }
+            else{
+                emptyCartText.style.display="none"
+                secondNav.style.display="block"
+            }
 
     })
 
+}
+if (bascetDDMenu.querySelector(".tbody").firstElementChild==null) {
+    secondNav.style.display="none"
+    emptyCartText.style.display="flex"
+}
+else{
+    emptyCartText.style.display="none"
+    secondNav.style.display="block"
 }
 
 
@@ -273,6 +336,15 @@ function AddToCard2(){
             }
             else{
                 emptyCart.style.display="none"
+            }
+
+            if (bascetDDMenu.querySelector(".tbody").firstElementChild==null) {
+                secondNav.style.display="none"
+                emptyCartText.style.display="flex"
+            }
+            else{
+                emptyCartText.style.display="none"
+                secondNav.style.display="block"
             }
             
         })
