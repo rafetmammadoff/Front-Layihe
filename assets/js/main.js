@@ -266,9 +266,12 @@ function AddToCard(e) {
 
             /////delete
             btn.addEventListener("click",function(e){
+                let basket=JSON.parse(localStorage.getItem("basket"))
+
                 let res=basket.find((obj)=>{
                     return obj.id==e.target.getAttribute("data-id")
                 })
+                
                 
                 let map=basket.map((obj)=>{
                     if (obj.id != res.id) {
@@ -282,6 +285,7 @@ function AddToCard(e) {
                 localStorage.setItem("basket",JSON.stringify(filtered))
 
                 e.target.closest("tr").remove();
+                e.stopPropagation()
                 GetCount();
                 GetPrice()
             })

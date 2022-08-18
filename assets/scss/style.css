@@ -27,6 +27,16 @@
           align-items: center;
 }
 
+.header .container .row .logo-big {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header .container .row .logo-med {
+  display: none;
+}
+
 .header .container .row .nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -228,6 +238,10 @@
   border: 1px solid #232323;
   outline: none;
   line-height: 18px;
+}
+
+.header .container .row .menu {
+  display: none;
 }
 
 .shop-header {
@@ -1612,10 +1626,37 @@ body::-webkit-scrollbar-thumb {
   .slide-area .slider-btn span {
     padding: 8px 15px !important;
   }
-  .header {
+  .header .logo-big {
     display: none !important;
   }
-  .header-med {
+  .header .nav {
+    display: none !important;
+  }
+  .header .logo-med {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+  .header .logo-med img {
+    width: 100% !important;
+  }
+  .header .icons {
+    width: -webkit-fit-content !important;
+    width: -moz-fit-content !important;
+    width: fit-content !important;
+  }
+  .header .icons .bi-search {
+    display: none !important;
+  }
+  .header .icons i {
+    color: black !important;
+    margin: 0 !important;
+  }
+  .header .icons .bascet .bascet-dropdown-menu {
+    width: 290px !important;
+    right: -30px !important;
+  }
+  .header .menu {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;

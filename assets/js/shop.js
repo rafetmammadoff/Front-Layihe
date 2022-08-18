@@ -214,6 +214,9 @@ function AddToCard2(){
             })
             localStorage.setItem("basket",JSON.stringify(filtered))
             path.remove();
+            GetCount()
+            GetPrice()
+            AddToCard()
 
             if (!shopTbody.firstElementChild) {
                 shopTable.style.display="none"
