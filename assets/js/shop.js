@@ -374,6 +374,15 @@ inputs.forEach((inp)=>{
     inp.addEventListener("input",function(){
         let total=inp.parentElement.parentElement.parentElement.querySelector(".total-price")
         let until=inp.parentElement.parentElement.parentElement.querySelector(".until-price")
-        total.innerText=inp.value * until.innerText
+        console.log(inp.value * until.innerText);
+        if (isNaN(inp.value * until.innerText)) {
+            total.innerText=until.innerText * 1
+            console.log("abc");
+            
+        }
+        else{
+            total.innerText=inp.value * until.innerText
+        }
+        
     })
 })

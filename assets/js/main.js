@@ -23,29 +23,6 @@ $('.sponsor-carousel').owlCarousel({
         }
     }
 })
-$('.customer-slide').owlCarousel({
-    loop:true,
-    margin:10,
-    responsiveClass:true,
-    responsive:{
-        0:{
-            items:1,
-            nav:true,
-            dots:false
-        },
-        600:{
-            items:1,
-            nav:true,
-            dots:false
-        },
-        1000:{
-            items:2,
-            nav:true,
-            dots:false,
-            loop:false
-        }
-    }
-})
 $('.product-slide').owlCarousel({
     loop:true,
     margin:10,
@@ -69,6 +46,53 @@ $('.product-slide').owlCarousel({
         }
     }
 })
+$('.related-slide').owlCarousel({
+    loop:true,
+    margin:10,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:2,
+            nav:true,
+            dots:false
+        },
+        600:{
+            items:3,
+            nav:true,
+            dots:false
+        },
+        1000:{
+            items:4,
+            nav:true,
+            dots:false,
+            loop:true
+        }
+    }
+})
+$('.customer-slide').owlCarousel({
+    loop:true,
+    margin:10,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+            nav:true,
+            dots:false
+        },
+        600:{
+            items:1,
+            nav:true,
+            dots:false
+        },
+        1000:{
+            items:2,
+            nav:true,
+            dots:false,
+            loop:false
+        }
+    }
+})
+
 $('.touch-slide').owlCarousel({
     loop:true,
     margin:10,

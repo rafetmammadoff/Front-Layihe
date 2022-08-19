@@ -17,6 +17,7 @@ quickBtns.forEach((btn)=>{
         let name=this.parentElement.parentElement.querySelector(".name").innerText
         let price=this.parentElement.parentElement.querySelector(".price").innerText
         let brand=this.parentElement.parentElement.parentElement.getAttribute("brand")
+        console.log(img,id,name,price,brand);
         console.log(brand);
         qvImg.src=`../assets/images/${img}`
         qvTitle.innerText=name;
