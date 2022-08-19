@@ -1815,6 +1815,18 @@ body::-webkit-scrollbar-thumb {
   .components .one-component .logo {
     margin-right: 14px !important;
   }
+  .quickview-section .view-area {
+    height: 300px;
+    overflow-x: scroll;
+  }
+  .quickview-section .view-area .row {
+    padding: 10px !important;
+    margin: 0 !important;
+  }
+  .quickview-section .view-area .row .product-left img {
+    width: 100% !important;
+    margin: 0 !important;
+  }
 }
 
 .opCl {
@@ -2167,8 +2179,6 @@ body::-webkit-scrollbar-thumb {
 
 .quickview-section .view-area {
   position: relative;
-  width: 900px;
-  height: 500px;
   background-color: white;
 }
 
@@ -2182,6 +2192,8 @@ body::-webkit-scrollbar-thumb {
 
 .quickview-section .view-area .row {
   height: 100%;
+  width: 100%;
+  margin: 0;
 }
 
 .quickview-section .view-area .row .product-left img {
@@ -2193,24 +2205,31 @@ body::-webkit-scrollbar-thumb {
   padding: 30px 0;
 }
 
-.quickview-section .view-area .row .product-right .attr {
-  list-style: none;
-  padding: 0;
+.quickview-section .view-area .row .product-right .my-list {
+  border-bottom: 1px solid #eee;
+  border-top: 1px solid #eee;
+  padding: 20px 0;
+  margin: 0 0 20px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
-.quickview-section .view-area .row .product-right .attr li {
+.quickview-section .view-area .row .product-right .my-list li {
+  width: 45%;
+  vertical-align: middle;
+  float: left;
   line-height: 28px;
   font-size: 14px;
   color: #666;
   padding: 5px 5px 0;
-  float: left;
   border: 1px solid #eee;
   margin-right: 15px;
   color: #666;
   margin-bottom: 15px;
 }
 
-.quickview-section .view-area .row .product-right .attr li span {
+.quickview-section .view-area .row .product-right .my-list li span {
   font-weight: 400;
   color: #232323;
   font-size: 13px;
@@ -2220,7 +2239,7 @@ body::-webkit-scrollbar-thumb {
   padding: 0;
 }
 
-.quickview-section .view-area .row .product-right .attr li a {
+.quickview-section .view-area .row .product-right .my-list li a {
   color: #666;
   text-decoration: none;
   background-color: transparent;

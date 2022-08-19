@@ -238,6 +238,22 @@ body::-webkit-scrollbar {
             }
         }
     }
+    .quickview-section{
+        .view-area{
+            height: 300px;
+            overflow-x: scroll;
+            .row{
+                padding: 10px !important;
+                margin: 0 !important;
+                .product-left{
+                    img{
+                        width: 100% !important;
+                        margin: 0 !important;
+                    }
+                }
+            }
+        }
+    }
 }
 .opCl{
     transform: translateX(0px) !important;
