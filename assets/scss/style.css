@@ -298,7 +298,6 @@
 
 .shop-header {
   background-color: white !important;
-  position: relative !important;
 }
 
 .shop-header .nav .main-ul li {
@@ -1869,6 +1868,7 @@ body::-webkit-scrollbar-thumb {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: top;
+  margin-top: 100px;
 }
 
 .breadcrumb ul {
