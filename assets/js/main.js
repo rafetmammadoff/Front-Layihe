@@ -139,3 +139,25 @@ $('.owl-carousel').owlCarousel({
 })
 
 
+let productLinks=document.querySelectorAll(".product-link")
+
+productLinks.forEach((link)=>{
+    
+    link.addEventListener("click",function(){
+        productLinks.forEach((link)=>{
+            if (link.classList.contains("active-link")) {
+                link.classList.remove("active-link")
+            }
+        })
+        let id=link.getAttribute("data-link")
+        let panels=document.querySelectorAll(".tab-pane")
+        link.classList.add("active-link")
+        panels.forEach((panel)=>{
+            if (panel.classList.contains("active")) {
+                panel.classList.remove("active")
+            }
+        })
+        
+        document.querySelector(`#${id}`).classList.add("active")
+    })
+})
