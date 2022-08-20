@@ -1912,6 +1912,18 @@ body::-webkit-scrollbar-thumb {
     margin-top: 10px !important;
     margin-bottom: 10px !important;
   }
+  .register-page-right form fieldset .form-group {
+    display: block !important;
+  }
+  .register-page-right form fieldset .form-group label {
+    margin-bottom: 10px !important;
+  }
+  .register-page-right form .buttons .pull-right a {
+    font-size: 12px !important;
+  }
+  .register-page-right form .buttons .pull-right .btn {
+    margin-top: 15px !important;
+  }
 }
 
 .opCl {
@@ -3660,5 +3672,147 @@ body::-webkit-scrollbar-thumb {
   height: 4px;
   background: #eb4d4b;
   margin-bottom: 25px;
+}
+
+.register-page-right .alert {
+  padding: 12px 14px 12px 14px;
+  text-align: center;
+  border-radius: 0;
+}
+
+.register-page-right .alert a {
+  color: black;
+}
+
+.register-page-right form fieldset legend {
+  color: #222;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 7px 0px;
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  line-height: inherit;
+  border: 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.register-page-right form fieldset .form-group {
+  margin-bottom: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.register-page-right form fieldset .form-group label {
+  color: #232323;
+  font-weight: 500;
+  float: left;
+}
+
+.register-page-right form fieldset .form-group label::before {
+  content: "*";
+  color: red;
+  font-size: 17px;
+}
+
+.register-page-right form fieldset .form-group span {
+  color: #232323;
+  font-weight: 500;
+}
+
+.register-page-right form fieldset .form-group input {
+  border-radius: 0px;
+  font-size: 15px;
+}
+
+.register-page-right form .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.register-page-right form .buttons .pull-right {
+  color: #666;
+}
+
+.register-page-right form .buttons .pull-right a {
+  color: #222;
+  font-weight: bold;
+  margin-right: 4px;
+}
+
+.register-page-right form .buttons .pull-right .btn {
+  opacity: 1;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border-radius: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  color: #fff;
+  background-color: #232323;
+  border: 1px solid #232323;
+  line-height: 18px;
+  margin-left: 5px;
+}
+
+.login-page-right .row .well {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: transparent;
+  border: 1px solid #e9e9e9;
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+}
+
+.login-page-right .row .well h2 {
+  color: #333;
+  font: 600 16px/24px 'Poppins', sans-serif;
+  margin: 0 0 15px;
+}
+
+.login-page-right .row .well p {
+  color: #333;
+  line-height: 22px;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.login-page-right .row .well .btn {
+  opacity: 1;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border-radius: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  color: #fff;
+  background-color: #232323;
+  border: 1px solid #232323;
+  line-height: 18px;
+}
+
+.login-page-right .row .well form .form-group {
+  margin-bottom: 12px;
+}
+
+.login-page-right .row .well form .form-group input {
+  border-radius: 0px;
+}
+
+.login-page-right .row .well form .form-group a {
+  color: black;
 }
 /*# sourceMappingURL=style.css.map */

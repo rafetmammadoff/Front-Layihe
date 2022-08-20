@@ -338,6 +338,29 @@ body::-webkit-scrollbar {
             
         }
     }
+    .register-page-right{
+        form{
+            fieldset{
+                .form-group{
+                    display: block !important;
+                    label{
+                        margin-bottom: 10px !important;
+                    }
+                }
+            }
+            .buttons{
+                .pull-right{
+                    a{
+                        font-size: 12px !important;
+
+                    }
+                    .btn{
+                        margin-top: 15px !important;
+                    }
+                }
+            }
+        }
+    }
 }
 .opCl{
     transform: translateX(0px) !important;

@@ -1,0 +1,77 @@
+.register-page-right{
+    .alert{
+        padding: 12px 14px 12px 14px;
+        text-align: center;
+        border-radius: 0;
+        a{
+            color: black;
+        }
+
+    }
+    form{
+        fieldset{
+            legend{
+                color: #222;
+                font-weight: 500;
+                font-size: 18px;
+                padding: 7px 0px;
+                display: block;
+                width: 100%;
+                margin-bottom: 20px;
+                line-height: inherit;
+                border: 0;
+                border-bottom: 1px solid #e5e5e5;
+            }
+            .form-group{
+                margin-bottom: 15px;
+                display: flex;
+                label{
+                    color: #232323;
+                    font-weight: 500;
+                    float: left;
+                    &::before{
+                        content: "*";
+                        color: red;
+                        font-size: 17px;
+                    }
+                }
+                span{
+                    color: #232323;
+                    font-weight: 500;
+                }
+                input{
+                    border-radius: 0px;
+                    font-size: 15px;
+                }
+            }
+            
+        }
+        .buttons{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            .pull-right{
+                color: #666;
+                a{
+                    color: #222;
+                    font-weight: bold;
+                    margin-right: 4px;
+                }
+                .btn{
+                    opacity: 1;
+                    font-size: 14px;
+                    font-weight: 400;
+                    padding: 10px 20px;
+                    text-transform: uppercase;
+                    border-radius: 0;
+                    transition: all 0.5s;
+                    color: #fff;
+                    background-color: #232323;
+                    border: 1px solid #232323;
+                    line-height: 18px;
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+}

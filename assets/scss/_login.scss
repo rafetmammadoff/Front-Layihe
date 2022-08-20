@@ -1,0 +1,49 @@
+.login-page-right{
+    .row{
+        .well{
+            box-shadow: none;
+            background-color: transparent;
+            border:1px solid #e9e9e9;
+            min-height: 20px;
+            padding: 19px;
+            margin-bottom: 20px;
+            border: 1px solid #e3e3e3;
+            border-radius: 4px;
+            h2{
+                color: #333;
+                font: 600 16px/24px 'Poppins', sans-serif;
+                margin: 0 0 15px;
+            }
+            p{
+                color: #333;
+                line-height: 22px;
+                font-size: 14px;
+                margin-bottom: 15px;
+            }
+            .btn{
+                opacity: 1;
+                font-size: 14px;
+                font-weight: 400;
+                padding: 10px 20px;
+                text-transform: uppercase;
+                border-radius: 0;
+                transition: all 0.5s;
+                color: #fff;
+                background-color: #232323;
+                border: 1px solid #232323;
+                line-height: 18px;
+            }
+            form{
+                .form-group{
+                    margin-bottom: 12px;
+                    input{
+                        border-radius: 0px;
+                    }
+                    a{
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+}
