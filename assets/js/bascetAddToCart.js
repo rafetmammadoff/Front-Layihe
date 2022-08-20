@@ -1,7 +1,9 @@
 let buttons=document.querySelectorAll(".two-component .btn-card button")
 let countArea=document.querySelector(".basket-count")
 let bascetBtn=document.querySelector(".bascet")
+let userBtn=document.querySelector(".user-btn")
 let bascetDDMenu=document.querySelector(".bascet-dropdown-menu")
+let userDDMenu=document.querySelector(".user-dropdown-menu")
 let tBody=document.querySelector(".tbody")
 let priceArea=document.querySelector(".total-value")
 
@@ -23,6 +25,21 @@ bascetBtn.addEventListener("click",function(e){
     }
     else{
         bascetDDMenu.style.height="0px"
+    }
+    
+})
+userBtn.addEventListener("click",function(e){
+    userDDMenu.classList.toggle("open-menu")
+    let children=Array.from(userDDMenu.children)
+    let total=0;
+    children.forEach((child)=>{
+        total+=child.clientHeight
+    })
+    if (userDDMenu.classList.contains("open-menu")) {
+        userDDMenu.style.height=total+"px"
+    }
+    else{
+        userDDMenu.style.height="0px"
     }
     
 })

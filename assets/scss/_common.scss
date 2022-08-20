@@ -1,6 +1,17 @@
 a{
     text-decoration: none !important;
 }
+.user-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    i{
+        font-size: 22px !important;
+    }
+}
+.drop-dropdown{
+    display: flex;
+}
 .main-container{
     max-width: 78%;
 }
@@ -262,6 +273,9 @@ body::-webkit-scrollbar {
         .txt{
             margin-bottom: 20px !important;
         }
+    }
+    .user-dropdown-menu{
+        right: 20px !important;
     }
     .components{
         .one-component{
