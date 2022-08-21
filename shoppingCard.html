@@ -102,7 +102,17 @@
                         <a href="./home.html"><img src="./assets/images/Logo.png" alt=""></a>
                     </div>
                     <div class="col-lg-3 icons">
-                        <i class="bi bi-search"></i>
+                        <div class="search-btn">
+                            <i class="bi bi-search"></i>
+                            <ul class="search-dropdown-menu list-unstyled">
+                                <li>
+                                    <input type="text" placeholder="Search Our Catalog">
+                                    <div class="btn">
+                                        <i class="fa fa-search"></i>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                         <div class="user-btn">
                             <i class="bi bi-person"></i>
                             <ul class="user-dropdown-menu list-unstyled">
@@ -268,7 +278,7 @@
                 <li>| Shopping Card</li>
             </ul>
         </div>
-        <p class="text-center empty-cart">Your shopping cart is empty</p>
+        <p class="empty-cart"><span>Your shopping cart is empty!</span> <a href="./home.html">Continue</a></p>
         <div class="shopping-table">
             <div class="container main-container">
                 
@@ -783,5 +793,6 @@
     <script src="./assets/js/accordion.js"></script>
     <script src="./assets/js/swipeNav.js"></script>
     <script src="./assets/js/nav-mouseOver.js"></script>
+    <script src="./assets/js/serchBtn.js"></script>
   </body>
 </html>

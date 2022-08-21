@@ -1,3 +1,23 @@
+.empty-cart{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: #888888;
+    a{
+        background-color: black;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 115px;
+        height: 40px;
+        transition: .4s;
+        &:hover{
+            background-color: red;
+        }
+    }
+}
+
 .breadcrumb{
     background-image: url(../images/breadcrumb.png);
     background-repeat: no-repeat;

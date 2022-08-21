@@ -296,7 +296,7 @@ function AddToCard2(){
 
             if (!shopTbody.firstElementChild) {
                 shopTable.style.display="none"
-                emptyCart.style.display="block"
+                emptyCart.style.display="flex"
             }
             else{
                 emptyCart.style.display="none"
@@ -319,7 +319,7 @@ function AddToCard2(){
 window.addEventListener("DOMContentLoaded",function(){
     if (!shopTbody.firstElementChild) {
         shopTable.style.display="none"
-        emptyCart.style.display="block"
+        emptyCart.style.display="flex"
     }
     else{
         emptyCart.style.display="none"
