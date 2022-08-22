@@ -849,7 +849,25 @@
 }
 .sponsor{
     padding: 70px 0px;
+    
     .owl-carousel{
+        .owl-item{
+            .item{
+                img{
+                    transition: 1s;
+                }
+            }
+            &:hover{
+                .item{
+                    img{
+                        transform: rotateY(360deg);
+                    }
+                }
+                
+            }
+            
+
+        }
         .owl-nav{
             .owl-prev,.owl-next{
                 width: 30px;

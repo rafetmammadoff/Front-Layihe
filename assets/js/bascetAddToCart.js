@@ -124,7 +124,7 @@ function AddToCard(e) {
             tr.append(td2)
             tr.append(td3)
             tBody.append(tr)
-           
+            
             /////delete
             btn.addEventListener("click",function(e){
                 let basket=JSON.parse(localStorage.getItem("basket"))

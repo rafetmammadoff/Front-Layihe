@@ -1031,6 +1031,16 @@
   padding: 70px 0px;
 }
 
+.sponsor .owl-carousel .owl-item .item img {
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.sponsor .owl-carousel .owl-item:hover .item img {
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
+}
+
 .sponsor .owl-carousel .owl-nav .owl-prev, .sponsor .owl-carousel .owl-nav .owl-next {
   width: 30px;
   height: 30px;
