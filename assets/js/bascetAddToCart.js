@@ -71,9 +71,7 @@ GetCount()
 GetPrice()
 function GetCount() {
     let CountBasket=JSON.parse(localStorage.getItem("basket")) || []
-    let count=CountBasket.reduce((total,val)=>{
-       return total+=val.count;
-    },0)
+    let count=CountBasket.length
     countArea.innerText=count
 }
 function GetPrice() {

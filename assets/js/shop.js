@@ -83,9 +83,10 @@ GetCount()
 GetPrice()
 function GetCount() {
     let CountBasket=JSON.parse(localStorage.getItem("basket")) || []
-    let count=CountBasket.reduce((total,val)=>{
-       return total+=val.count;
-    },0)
+    // let count=CountBasket.reduce((total,val)=>{
+    //    return total+=val.count;
+    // },0)
+    let count=CountBasket.length
     countArea.innerText=count
 }
 function GetPrice() {
@@ -118,8 +119,7 @@ function AddToCard(e) {
             tr.remove();
         })
     }
-    console.log(trs.length);
-    console.log(trs);
+    
     basket.forEach((obj)=>{
             let tr=document.createElement("tr")
             let td1=document.createElement("td")
@@ -151,7 +151,7 @@ function AddToCard(e) {
 
             /////delete
             btn.addEventListener("click",function(e){
-                console.log(e.target);
+                
                 let res=basket.find((obj)=>{
                     return obj.id==this.getAttribute("data-id")
                 })
@@ -213,7 +213,7 @@ else{
 
 function AddToCard2(){
     let basket=JSON.parse(localStorage.getItem("basket"))
-    console.log(basket);
+    
     let trs=tBody.querySelectorAll("tr")
     if (trs.length>0) {
         trs.forEach((tr)=>{
@@ -243,7 +243,7 @@ function AddToCard2(){
         input.value=obj.count
         input.className="my-input"
         input.addEventListener("oninput",function(){
-            console.log("aaaaaaaa");
+            
         })
         let btn1=document.createElement("button")////
         btn1.className="btn btn-dark"///////////////
@@ -272,9 +272,9 @@ function AddToCard2(){
 
         btn2.addEventListener("click",function(e){
             let basket=JSON.parse(localStorage.getItem("basket"))
-            console.log();
+            
             let path=e.target.closest('tr')
-            console.log(path);
+            
             let res=basket.find((val)=>{
                 return  val.id==path.querySelector(".id").innerText
             })
@@ -333,20 +333,46 @@ window.addEventListener("DOMContentLoaded",function(){
 AddToCard2();
 
 let inputs=document.querySelectorAll(".my-input")
-console.log(inputs);
+
 inputs.forEach((inp)=>{
     inp.addEventListener("input",function(){
         let total=inp.parentElement.parentElement.parentElement.querySelector(".total-price")
         let until=inp.parentElement.parentElement.parentElement.querySelector(".until-price")
-        console.log(inp.value * until.innerText);
+        
         if (isNaN(inp.value * until.innerText)) {
             total.innerText=until.innerText * 1
-            console.log("abc");
+            
             
         }
         else{
             total.innerText=inp.value * until.innerText
+
+            
         }
+
+        function raf(e){
+            let basket=JSON.parse(localStorage.getItem("basket"))
+        
+            let path=inp.closest('tr')
+            
+            let res=basket.find((val)=>{
+                return  val.id==path.querySelector(".id").innerText
+            })
+            if (isNaN(inp.value * until.innerText)) {
+                res.count=1
+            }
+            else{
+                res.count=inp.value
+            }
+            localStorage.setItem("basket",JSON.stringify(basket))
+            GetPrice()
+            
+            
+            
+            
+            
+        }
+        raf()
         
     })
 })
