@@ -99,7 +99,7 @@ function AddToCard(e) {
             let td1=document.createElement("td")
             td1.className="img-area";
             let image=document.createElement("img")
-            image.src=`../assets/images/${obj.img}`
+            image.src=`./assets/images/${obj.img}`
             td1.append(image)
 
             let td2=document.createElement("td")
